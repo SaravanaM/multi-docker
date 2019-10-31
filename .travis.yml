@@ -10,7 +10,7 @@ script:
 
 after_success:
   - docker build -t saravana/multi-client ./client
-  - docker built -t saravana/multi-nginx ./nginx
+  - docker build -t saravana/multi-nginx ./nginx
   - docker build -t saravana/multi-server ./server
   - docker build -t saravana/multi-worker ./worker
 
