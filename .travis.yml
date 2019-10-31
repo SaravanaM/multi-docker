@@ -9,16 +9,16 @@ script:
   - docker run -e CI=true saravana/react-test npm test
 
 after_success:
-  - docker build -t saravana/multi-client ./client
-  - docker build -t saravana/multi-nginx ./nginx
-  - docker build -t saravana/multi-server ./server
-  - docker build -t saravana/multi-worker ./worker
+  - docker build -t khkz211/multi-client ./client
+  - docker build -t khkz211/multi-nginx ./nginx
+  - docker build -t khkz211/multi-server ./server
+  - docker build -t khkz211/multi-worker ./worker
 
 # Log in to the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   
 # Take the images and push them in Docker Hub
-  - docker push saravana/multi-client
-  - docker push saravana/multi-nginx
-  - docker push saravana/multi-server
-  - docker push saravana/multi-worker
+  - docker push khkz211/multi-client
+  - docker push khkz211/multi-nginx
+  - docker push khkz211/multi-server
+  - docker push khkz211/multi-worker
