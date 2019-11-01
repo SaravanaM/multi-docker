@@ -27,12 +27,12 @@
             "image": "khkz211/multi-nginx",
             "host": "nginx",
             "essential": true,
-            "memory": 128,
             "portMappings": [{
                 "hostPort": 80,
                 "containerPort": 80
             }],
-            "links": ["client", "server"]
+            "links": ["client", "server"],
+            "memory": 128
         }
     ]
 }
